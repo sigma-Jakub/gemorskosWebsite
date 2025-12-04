@@ -39,7 +39,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemorskos | Log In</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="styles/styleLogin.css">
 </head>
 <body>
     <header>

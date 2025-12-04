@@ -111,9 +111,8 @@
                 <div class="content-two-container">
                     <p class="content-text content-text-two">
                         "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Aliquam asperiores quis modi sit reiciendis ducimus voluptas dolorem deserunt aspernatur autem, 
-                        numquam labore nesciunt nam facere natus voluptate dolor, temporibus possimus at harum? Lorem, ipsum dolor sit amet consectetur adipisicing elit."
-                        <div><b class="content-text">-Lorem Ipsum</b></div>
+                        Aliquam asperiores quis modi sit reiciendis ducimus voluptas dolorem deserunt aspernatur autem."
+                        <strong class="content-text signature">-Lorem Ipsum</strong>
                     </p>
                 </div>
             </div>
