@@ -160,6 +160,7 @@ h1 {
 }
 
 .content-text {
+    min-width: 250px;
     line-height: 2.5vh;
     margin-left: 32px;
     margin-top: 32px;
