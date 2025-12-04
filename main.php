@@ -52,7 +52,7 @@
             <div class="main-header-right">
                 <div class="main-header-button-container">
                     <a href="#" class="main-header-button">REGISTER</a>
-                    <a href="#" class="main-header-button">LOG IN</a>
+                    <a href="login.php" class="main-header-button">LOG IN</a>
                 </div>
             </div>
         </div>
@@ -96,7 +96,7 @@
         </div>
         <div class="main-content-grid">
             <div class="content-one">
-                <div class="content-container">
+                <div>
                     <h1 class="content-title">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                     </h1>

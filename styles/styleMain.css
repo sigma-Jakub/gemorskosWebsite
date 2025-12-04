@@ -4,7 +4,6 @@ body {
     background-image: url("../images/mainPageImg/mainBackground.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
     background-color: #FFFFFF;
     font-family: 'Times New Roman', Times, serif;
     font-size: 18px;
@@ -16,11 +15,7 @@ body {
     overflow: hidden;
 }
 
-p {
-    margin: 0;
-}
-
-h1 {
+p, h1 {
     margin: 0;
 }
 
@@ -30,7 +25,6 @@ h1 {
     background-color: #FFFFFF;
     border-right: 2px solid #000000;
     border-left: 2px solid #000000;
-    min-width: 1400px;
 }
 
 .main-header {
@@ -169,11 +163,6 @@ h1 {
     margin-bottom: 12px;
 }
 
-.content-container {
-    height: 90%;
-    width: 90%;
-}
-
 .content-two-container {
     border: 2px solid #000000;
     height: 90%;
@@ -189,8 +178,8 @@ h1 {
 }
 
 .content-cat-img {
-    height: auto;
     max-height: 400px;
+    min-height: 200px;
     object-fit: contain;
     margin-top: 32px;
 }
