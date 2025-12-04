@@ -1,0 +1,4 @@
+- static body background image
+- prevent body text from shrinking
+- work on resizable header
+- delete overflow from body
