@@ -9,28 +9,6 @@
 
 ?>
 
-<script>
-    function updateTime() {
-        const now = new Date();
-
-        const timeString = now.toLocaleTimeString("en-US", {
-            hour: "2-digit",
-            minute: "2-digit",
-            second: "2-digit",
-            hour12: false
-        });
-
-        const timeDisplay = document.getElementById('current-time-display');
-
-        if(timeDisplay) {
-            timeDisplay.textContent = timeString;
-        }
-    }
-
-    updateTime();
-    setInterval(updateTime, 1000);
-</script>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,7 +25,7 @@
                 <span class="main-date" id="current-time-display"></span>
             </div>
             <div class="main-header-mid">
-                <img src="images/mainPageImg/mainLogo.png" alt="gemorskos-logo" class="main-logo-img">
+                <img class="main-logo-img" src="images/mainPageImg/mainLogo.png" alt="gemorskos-logo">
             </div>
             <div class="main-header-right">
                 <div class="main-header-button-container">
@@ -95,63 +73,76 @@
             </div>
         </div>
         <div class="main-content-grid">
-            <div class="content-one">
-                <div>
-                    <h1 class="content-title">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    </h1>
-                    <p class="content-text">
-                        Sed consequat tincidunt tortor ac tempor. 
-                        Curabitur ultricies enim sed dolor placerat ornare. Cras sit amet lectus sit amet erat fringilla aliquet. 
-                        Nullam scelerisque lorem eget aliquam faucibus. Mauris at bibendum sapien.
-                    </p>
-                </div>
-            </div>
-            <div class="content-two">
-                <div class="content-two-container">
-                    <p class="content-text content-text-two">
-                        "Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Aliquam asperiores quis modi sit reiciendis ducimus voluptas dolorem deserunt aspernatur autem."
-                        <strong class="content-text signature">-Lorem Ipsum</strong>
-                    </p>
-                </div>
-            </div>
-            <div class="content-three">
-                <p class="content-text content-text-three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quidem similique dolores! 
-                    Tempora pariatur perspiciatis quod molestiae id impedit magnam obcaecati, modi amet nobis unde voluptates minus nostrum 
-                    adipisci quo fugiat quia eligendi quibusdam ea laboriosam iure blanditiis! Illo temporibus optio aspernatur, nobis, nulla 
-                    consequatur a maxime, repudiandae aliquid recusandae magni veniam exercitationem modi! Accusamus sed quisquam alias quos error 
-                    cum pariatur laudantium velit assumenda minima officia cumque sunt ducimus corrupti deleniti eum laborum quasi expedita, 
-                    non similique beatae at doloribus! Voluptatum molestias officia illo dolore accusantium exercitationem harum id est, 
-                    commodi quam repudiandae laudantium, sint ex natus reiciendis illum.
-                    consequatur a maxime, repudiandae aliquid recusandae magni veniam exercitationem modi! Accusamus sed quisquam alias quos error 
-                    cum pariatur laudantium velit assumenda minima officia cumque sunt ducimus corrupti deleniti eum laborum quasi expedita, 
-                    non similique beatae at doloribus! Voluptatum molestias officia illo dolore accusantium exercitationem harum id est, 
-                    commodi quam repudiandae laudantium, sint ex natus reiciendis illum.
+            <div class="main-content-container grid-content-placement-one">
+                <p class="text-container">
+                    <span class="title-container-one">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</span> Quasi iure, 
+                    ullam asperiores veritatis reiciendis voluptatem eum eos impedit officiis? Dolor sequi saepe modi esse voluptatum consequatur cum deleniti neque eos?
                 </p>
             </div>
-            <div class="content-four">
-                <div class="content-wrapper">
-                    <img class="content-cat-img" src="images/mainPageImg/mainCat.png" alt="cute-cat-img">
-                    <p class="content-text content-text-four">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit qui atque iure adipisci? Ad in quae suscipit, 
-                        reiciendis recusandae magnam mollitia ab expedita nobis doloribus tenetur. Illum animi ducimus aperiam quos dolorum 
-                        obcaecati molestiae est impedit! Fugit labore voluptatibus autem laudantium cupiditate, ducimus sit minus!
+            <div class="main-content-container grid-content-placement-two">
+                <div class="border-container-two">
+                    <p class="text-container-two">
+                        "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi iure, ullam asperiores veritatis reiciendis voluptatem eum eos impedit officiis?"
+                    </p>
+                    <p class="signature-two">
+                        - Lorem ipsum.
                     </p>
                 </div>
             </div>
-            <div class="content-five">
-                <img class="content-newspaper-img" src="images/mainPageImg/mainNewspaper.png" alt="newspaper-img">
-            </div>
-            <div class="content-six">
-                <p class="content-text">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus maiores omnis, delectus accusantium tempora pariatur. 
-                    Placeat mollitia fugiat optio laudantium at. Culpa, delectus sequi similique fuga dicta pariatur aliquam impedit.
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, sapiente veritatis odit minus labore obcaecati? 
-                    Commodi aliquam, mollitia neque error nam rerum magni, illum sint pariatur vitae fugiat, molestiae ea consectetur amet?
+            <div class="main-content-container grid-content-placement-three">
+                <p class="text-container">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tincidunt tortor ac tempor. Curabitur ultricies enim sed dolor placerat ornare. 
+                    Cras sit amet lectus sit amet erat fringilla aliquet. Nullam scelerisque lorem eget aliquam faucibus. Mauris at bibendum sapien. Cras quam ante, 
+                    laoreet vitae sodales ut, pretium eget velit. Donec et viverra metus, vel feugiat neque.
+                    Nam ullamcorper nisi eu nibh porttitor faucibus. Donec ut nunc non nisi varius volutpat a vel neque. 
+                    Ut sit amet sodales massa. Morbi pharetra ante et accumsan volutpat. Donec et elit orci. Nulla erat est, tempus quis tellus venenatis, 
+                    interdum rutrum ante. Ut dignissim commodo justo a malesuada. Sed vel velit pretium, lacinia quam eget, elementum diam. Praesent consequat odio ut lacus rhoncus interdum. 
+                    Suspendisse tempor consectetur odio, ac volutpat nulla blandit sit amet. Donec commodo, erat sit amet varius porttitor, libero lectus scelerisque leo, sit amet interdum urna erat id ante. 
+                    Donec blandit nisl nec ligula lobortis, sit amet volutpat diam ultricies. Nam ac lacus at enim tempor tincidunt.
                 </p>
+            </div>
+            <div class="main-content-container grid-content-placement-four">
+                <div class="flex-container-four">
+                    <img class="cat-img" src="images/mainPageImg/mainCat.png" alt="cute-cat-img">
+                    <p class="text-container">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed consequat tincidunt tortor ac tempor. Curabitur ultricies enim sed dolor placerat ornare. 
+                        Cras sit amet lectus sit amet erat fringilla aliquet. Nullam scelerisque lorem eget aliquam faucibus. Mauris at bibendum sapien. Cras quam ante, laoreet vitae sodales ut, 
+                        pretium eget velit. Donec et viverra metus, vel feugiat neque.
+                        Nam ullamcorper nisi eu nibh porttitor faucibus.
+                    </p>
+                </div>
+            </div>
+            <div class="main-content-container grid-content-placement-five">
+                <div class="flex-container-five">
+                    <img class="newspaper-img" src="images/mainPageImg/mainNewspaper.png" alt="newspaper-img">
+                </div>
+            </div>
+            <div class="main-content-container grid-content-placement-six">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi iure, ullam asperiores veritatis reiciendis voluptatem eum eos impedit officiis? Dolor sequi saepe modi esse voluptatum consequatur cum deleniti neque eos?</p>
             </div>
         </div>
     </div>
 </body>
 </html>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+
+        const timeString = now.toLocaleTimeString("en-US", {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hour12: false
+        });
+
+        const timeDisplay = document.getElementById('current-time-display');
+
+        if(timeDisplay) {
+            timeDisplay.textContent = timeString;
+        }
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
