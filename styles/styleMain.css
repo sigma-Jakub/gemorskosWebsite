@@ -7,7 +7,6 @@ body {
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     justify-content: center;
-    align-items: center;
     font-size: 24px;
 }
 
@@ -16,12 +15,9 @@ p, h1 {
 }
 
 .main-container {
-    align-self: baseline;
     width: 90vw;
     background-color: #FFFFFF;
-    border-right: 2px solid #000000;
-    border-left: 2px solid #000000;
-    border-bottom: 2px solid #000000;
+    border: 2px solid #000000;
 }
 
 .main-header {
@@ -149,7 +145,7 @@ p, h1 {
 .signature-two {
     font-size: 22px;
     font-weight: bold;
-    padding-left: 12px;
+    padding: 12px;
     font-style: italic;
 }
 
