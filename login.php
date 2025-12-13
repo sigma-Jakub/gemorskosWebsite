@@ -42,35 +42,42 @@
     <link rel="stylesheet" href="styles/styleLogin.css">
 </head>
 <body>
-    <header>
-        <div id="headerContent">
-            <img id="logo" src="images/loginPageImg/logo-no-text.png" alt="Logo">
-            <p id="headerText">LOG IN</p>
-        </div>
-    </header>
-    <main>
-        <div id="mainContent">
-            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
-                <div class="formCategory">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" id="username">
+    <div class="pageWrapper">
+        <header>
+            <div id="headerContent">
+                <img id="logo" src="images/loginPageImg/logo-no-text.png" alt="Logo">
+                <p id="headerText">LOG IN</p>
+                <div class="buttonWrapper">
+                    <a href="main.php" class="loginButton headerButton">BACK</a>
                 </div>
-                <div class="formCategory">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" id="password">
+            </div>
+        </header>
+        <main class="mainFlex">
+            <div id="mainContent">
+                <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST">
+                    <div class="formCategory">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username">
+                    </div>
+                    <div class="formCategory">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div id="buttonContainer">
+                        <button type="submit" class="loginButton">Submit</button>
+                        <button type="reset" class="loginButton">Reset</button>
+                    </div>
+                </form>
+                <div class="errorsContainer">
+                    <?php
+                        if($_SERVER["REQUEST_METHOD"] == "POST")
+                        {
+                            validateInput();
+                        }
+                    ?>
                 </div>
-                <div id="buttonContainer">
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset</button>
-                </div>
-            </form>
-            <?php
-                if($_SERVER["REQUEST_METHOD"] == "POST")
-                {
-                    validateInput();
-                }
-            ?>
-        </div>
-    </main>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
