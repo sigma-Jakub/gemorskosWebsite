@@ -48,7 +48,7 @@
                 <img id="logo" src="images/loginPageImg/logo-no-text.png" alt="Logo">
                 <p id="headerText">LOG IN</p>
                 <div class="buttonWrapper">
-                    <a href="main.php" class="loginButton headerButton">BACK</a>
+                    <a href="index.php" class="loginButton headerButton">BACK</a>
                 </div>
             </div>
         </header>
