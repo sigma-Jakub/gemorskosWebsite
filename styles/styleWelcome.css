@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url("../images/mainPageImg/mainBackground.png");
+    background-size: cover;
+    background-color: #FFFFFF;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.title {
+    font-size: 96px;
+    font-weight: bold;
+}
+
+.redirect-button {
+    font-size: 32px;
+    text-decoration: none;
+    font-weight: bold;
+    border: 3px solid blue;
+    color: blue;
+    padding: 5px;
+    margin-left: 24px;
+    margin-right: 24px;
+    transition: 0.3s;
+}
+
+.redirect-button:hover {
+    background-color: blue;
+    color: lightblue;
+}

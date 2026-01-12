@@ -1,36 +1,36 @@
 <?php
-    function validateInput()
-    {
+    $error = "";
 
-        $username = filter_input(INPUT_POST, "username", FILTER_SANITIZE_SPECIAL_CHARS);
-        $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_SPECIAL_CHARS);
+    if($_SERVER["REQUEST_METHOD"] == "POST") {
+        include "dbHandler.php";
 
-        $errors = array();
-        $errorFlag = FALSE;
+        $username = filter_input(INPUT_POST, "username", FILTER_DEFAULT, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $password = $_POST["password"];
+  
+        if(empty($username) || empty($password)) {
+            $error = "<p class='error'>Please fill up all the inputs.</p>";
+        } else {
+            if($dbHandler) {
+                try {
+                    $stmt = $dbHandler->prepare("SELECT * FROM `employee` WHERE `username` = :username");
+                    $stmt->bindParam("username", $username, PDO::PARAM_STR);
+                    $stmt->execute();
+                    $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        if(empty(trim($username)) || strlen($username) < 5)
-        {
-            array_push($errors, "<p class='error'>Please enter a valid username.</p>");
-            $errorFlag = TRUE;
-        }
-
-        if(empty(trim($password)))
-        {
-            array_push($errors, "<p class='error'>Please enter a valid password.</p>");
-            $errorFlag = TRUE;
-        }
-
-        // Add password check.
-
-        if(!empty($errors))
-        {
-            foreach($errors as $error)
-            {
-                echo $error;
+                    if($result && password_verify($password, $result["passwordHash"])) {
+                        header("Location: welcome.php");
+                        exit();
+                    } else {
+                        $error = "<p class='error'>Combination of username and password was not found.</p>";
+                    }
+                    $stmt->closeCursor();
+                } catch(Exception $ex) {
+                    $error = $ex;
+                }
             }
         }
-    }
 
+    }
 ?>
 
 <!DOCTYPE html>
@@ -70,9 +70,8 @@
                 </form>
                 <div class="errorsContainer">
                     <?php
-                        if($_SERVER["REQUEST_METHOD"] == "POST")
-                        {
-                            validateInput();
+                        if(!empty($error)) {
+                            echo $error;
                         }
                     ?>
                 </div>
