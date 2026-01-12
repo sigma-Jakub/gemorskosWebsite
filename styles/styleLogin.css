@@ -188,10 +188,24 @@ input[type=button], [type=submit], [type=reset]
     flex-direction: column;
 }
 
-.error
+.error, .success, .register-success, .error-absolute
 {
     font-size: 18px;
     color: red;
     margin-top: 6px;
     margin-bottom: 6px;
+}
+
+.success {
+    color: green;
+}
+
+.number-pattern {
+    font-size: 14px;
+}
+
+.register-success {
+    color: blue;
+    text-decoration: none;
+    font-size: 24px;
 }

@@ -30,7 +30,7 @@
             </div>
             <div class="main-header-right">
                 <div class="main-header-button-container">
-                    <a href="#" class="main-header-button">REGISTER</a>
+                    <a href="register.php" class="main-header-button">REGISTER</a>
                     <a href="login.php" class="main-header-button">LOG IN</a>
                 </div>
             </div>
