@@ -48,6 +48,7 @@ p, h1 {
     color: #000000;
     padding: 16px 6px;
     transition: 0.3s;
+    border: 2px solid #000000;
 }
 
 .main-header-button:hover {

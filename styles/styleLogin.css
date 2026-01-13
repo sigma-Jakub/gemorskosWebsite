@@ -178,6 +178,7 @@ input[type=button], [type=submit], [type=reset]
 
 .headerButton {
     background-color: #FFFFFF;
+    border: 2px solid #000000;
 }
 
 
@@ -205,7 +206,19 @@ input[type=button], [type=submit], [type=reset]
 }
 
 .register-success {
-    color: blue;
+    padding: 16px 6px;
+    color: #000000;
+    background-color: #EBEBEB;
+    border: 2px solid #000000;
     text-decoration: none;
     font-size: 24px;
+    transition: 0.3s;
+}
+
+.register-success:hover {
+    background-color: #D9D9D9;
+}
+
+.register-success:active {
+    opacity: 0.7;
 }
