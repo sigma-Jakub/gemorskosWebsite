@@ -29,7 +29,7 @@ body {
 }
 
 .title {
-    font-size: 96px;
+    font-size: 72px;
     font-weight: bold;
 }
 
@@ -38,6 +38,7 @@ body {
 }
 
 .redirect-button {
+    border: 2px solid #000000;
     text-decoration: none;
     color: #000000;
     padding: 16px 6px;
@@ -57,4 +58,18 @@ body {
 
 .subtitle {
     font-size: 64px;
+}
+
+.employee-title {
+    font-size: 32px;
+    margin-top: 64px;
+    margin-bottom: 12px;
+}
+
+th, td {
+    padding: 5px;
+}
+
+th {
+    width: 200px;
 }
