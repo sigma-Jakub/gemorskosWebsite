@@ -211,6 +211,13 @@ p, h1 {
     max-width: 540px;
 }
 
+.logged-as-text {
+    margin-top: 12px;
+    font-size: 16px;
+    justify-self: center;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1200px) {
     .title-container-one {
         font-size: 26px;
