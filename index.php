@@ -1,4 +1,6 @@
 <?php
+    session_start();
+
     function displayDate() {
         date_default_timezone_set("Europe/Amsterdam");
 
@@ -29,10 +31,25 @@
                 <img class="main-logo-img" src="images/mainPageImg/mainLogo.png" alt="gemorskos-logo">
             </div>
             <div class="main-header-right">
-                <div class="main-header-button-container">
-                    <a href="register.php" class="main-header-button">REGISTER</a>
-                    <a href="login.php" class="main-header-button">LOG IN</a>
-                </div>
+                <?php
+                    if(isset($_SESSION["access"])) {
+                        echo '
+                            <div class="main-header-button-container">
+                                <a href="logout.php" class="main-header-button">LOG OUT</a>
+                            </div>
+                            <div class="logged-as-container">
+                                <p class="logged-as-text">Logged as: ' . $_SESSION["access"] . '</p>
+                            </div>
+                        ';       
+                    } else {
+                        echo '
+                            <div class="main-header-button-container">
+                                <a href="register.php" class="main-header-button">REGISTER</a>
+                                <a href="login.php" class="main-header-button">LOG IN</a>
+                            </div>
+                        ';
+                    }
+                ?>
             </div>
         </div>
         <div class="main-rotator">

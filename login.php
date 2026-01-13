@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    
     $error = "";
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -18,6 +20,7 @@
                     $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
                     if($result && password_verify($password, $result["passwordHash"])) {
+                        $_SESSION["access"] = $username;
                         header("Location: welcome.php");
                         exit();
                     } else {
