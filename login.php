@@ -1,6 +1,6 @@
 <?php
     session_start();
-    
+
     $error = "";
 
     if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -42,6 +42,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gemorskos | Log In</title>
+    <link rel="icon" href="images/websiteIcon.png">
     <link rel="stylesheet" href="styles/styleLogin.css">
 </head>
 <body>
